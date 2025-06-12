@@ -69,8 +69,7 @@ def cambiar_contraseña(request):
         form = PasswordChangeForm(user=request.user)
     return render(request, 'accounts/change_password.html', {'form': form})
 
-from .forms import PiezaForm
-from .models import Pieza
+from pages.models import Pieza
 
 @login_required
 def crear_pieza(request):

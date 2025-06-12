@@ -4,5 +4,4 @@ from .models import Pieza
 class PiezaForm(forms.ModelForm):
     class Meta:
         model = Pieza
-        fields = ['titulo', 'descripcion', 'imagen', 'contenido']
-
+        fields = ['titulo', 'descripcion', 'imagen']

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>¿Estás seguro de que querés borrar "{{ pieza.titulo }}"?</h1>
+<h1>¿Estás seguro de que querés borrar "{{ object.titulo }}"?</h1>
 
 <form method="post">
     {% csrf_token %}
