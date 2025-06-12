@@ -1,0 +1,135 @@
+body {
+    background-color: #f6f0e8;
+    font-family: 'Segoe UI', sans-serif;
+    color: #4e3d2c;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fffaf5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2 {
+    color: #7e5d45;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #e7d3ba;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+}
+
+nav a {
+    color: #5b3b1a;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #a06b3e;
+}
+
+.hero {
+    background-color: #fffaf5;
+    padding: 2rem;
+    border-left: 6px solid #e7d3ba;
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 1.1rem; }
+
+.pieza-detalle {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fffaf5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pieza-detalle h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #4b2e2e;
+}
+
+.pieza-detalle p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.pieza-detalle .descripcion {
+  margin: 20px 0;
+}
+
+.pieza-detalle img {
+  display: block;
+  margin: 20px 0;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.pieza-detalle a {
+  text-decoration: none;
+  color: #7b4b2f;
+  font-weight: bold;
+}
+
+.pieza-detalle a:hover {
+  text-decoration: underline;
+}
+
+.pieza-resumen {
+  background-color: #fffaf5;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pieza-resumen img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.frase-taller {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff3e6;
+  border-left: 6px solid #e6b07c;
+  max-width: 700px;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.frase-taller blockquote {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #5a3a1a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.frase-taller footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #a06a42;
+}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Enviar mensaje</h2>
+
+{% if destinatario %}
+<p>Vas a enviar un mensaje a <strong>{{ destinatario.username }}</strong></p>
+{% endif %}
+
+<form method="post" style="max-width: 500px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" style="
+        background-color: #d9bfa3;
+        color: #4b2e2e;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    ">Enviar</button>
+</form>
+
+<a href="{% url 'inbox' %}" style="
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #5e4228;
+    font-size: 14px;
+">
+    ← Volver a la bandeja de entrada
+</a>
+{% endblock %}

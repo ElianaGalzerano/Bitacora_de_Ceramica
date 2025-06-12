@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="{% url 'enviar_mensaje' %}" style="
+  background-color: #d9bfa3;
+  color: #4b2e2e;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;">
+    ✉️ Nuevo mensaje
+</a>
+
+<h2>Bandeja de entrada</h2>
+
+{% if messages %}
+{% for message in messages %}
+{% for mensaje in messages %}
+{% if mensaje.tags %}
+<div class="alert alert-{{ mensaje.tags }}">
+    {{ mensaje }}
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if mensajes %}
+<ul>
+    {% for mensaje in mensajes %}
+    <li>
+        <strong>De:</strong> {{ mensaje.remitente.username }}<br>
+        <strong>Mensaje:</strong> {{ mensaje.contenido }}<br>
+        <strong>Enviado:</strong> {{ mensaje.fecha_envio|date:"d/m/Y H:i" }}
+        <form action="{% url 'borrar_mensaje' mensaje.pk %}" method="post" style="display:inline;"
+            onsubmit="return confirm('¿Estás seguro de que querés borrar este mensaje?');">
+            {% csrf_token %}
+            <button type="submit" style="background-color: transparent; border: none; color: red; cursor: pointer;">
+                🗑️ Borrar
+            </button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No tenés mensajes aún.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="pieza-detalle">
+    <h2>{{ pieza.titulo }}</h2>
+    <p><strong>Técnica:</strong> {{ pieza.tecnica }}</p>
+    <p class="descripcion">{{ pieza.descripcion|safe }}</p>
+    {% if pieza.imagen %}
+    <img src="{{ pieza.imagen.url }}" alt="{{ pieza.titulo }}" width="300">
+    {% endif %}
+    <p><a href="{% url 'lista_piezas' %}">⬅ Volver a las piezas</a></p>
+</div>
+{% endblock %}
