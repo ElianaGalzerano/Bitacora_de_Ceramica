@@ -10,7 +10,7 @@ def signup_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            Perfil.objects.create(user=user)
+            Perfil.objects.get_or_create(user=user)
             login(request, user)
             return redirect('home')
     else:
